@@ -1,19 +1,67 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fa">
 <head>
-<meta charset="UTF-8">
-<title data-i18n="title">BRIX Marketplace</title>
-<link rel="stylesheet" href="styles/styles.css">
-<script src="scripts/i18n.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="title">BRIX Marketplace</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/i18n.js" defer></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 <body>
-<header>
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('fa')">FA</button>
-  <button onclick="setLang('ar')">AR</button>
-</header>
-<h1 data-i18n="welcome">Welcome to BRIX Marketplace</h1>
-<p data-i18n="desc">Buy globally with BRICS token.</p>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.png" class="logo" alt="BRIX">
+      <div>
+        <h1 data-i18n="title">BRIX Marketplace</h1>
+        <div class="muted" data-i18n="hero_sub">Global cross-border commerce • Pay with BRICS token</div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="lang-switch">
+        <button data-set-lang="fa" class="lang-btn">FA</button>
+        <button data-set-lang="ar" class="lang-btn">AR</button>
+        <button data-set-lang="en" class="lang-btn">EN</button>
+      </div>
+      <button id="btn-login" class="btn" data-i18n="login">ورود / ثبت‌نام</button>
+      <button id="btn-cart" class="btn" data-i18n="cart_text">سبد خرید (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2 data-i18n="hero_title">BRIX — کارت خرید جهانی</h2>
+      <p data-i18n="hero_sub">خرید کارت BRIX، شارژ با توکن BRICS و خرید از فروشندگان بین‌المللی.</p>
+      <div class="hero-cta">
+        <button id="create-card" class="cta" data-i18n="create_card">تهیه کارت BRIX</button>
+        <a href="#products" class="cta ghost" data-i18n="view_products">مشاهده محصولات</a>
+      </div>
+    </section>
+
+    <section id="brix-highlight" class="brix-card">
+      <h3 data-i18n="brix_highlight_title">🌟 Project Brix — زیرمجموعه BRICS</h3>
+      <p data-i18n="brix_highlight_sub">پروژه Brix بازار بین‌المللی مد و محصولات صادراتی را با پرداخت رمزنگاری تسهیل می‌کند.</p>
+      <a class="cta" href="https://brixpay.lovable.app/" target="_blank" data-i18n="view_brix">مشاهده Brix</a>
+    </section>
+
+    <section id="products" class="card-list">
+      <h3 data-i18n="products_title">محصولات</h3>
+      <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <section id="checkout-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3 data-i18n="checkout_title">Checkout — BRIX Card</h3>
+        <div id="checkout-body"></div>
+        <div class="modal-actions" style="margin-top:12px">
+          <button id="confirm-pay" class="cta" data-i18n="pay_with_brics">پرداخت با BRICS</button>
+          <button id="close-modal" class="btn ghost" data-i18n="close">بستن</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" data-i18n="footer">BRIX Marketplace © 2025</footer>
 </body>
 </html>

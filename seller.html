@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title data-i18n="seller_upload">Seller — BRIX Marketplace</title>
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts/i18n.js" defer></script>
+<script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <div class="container" style="padding-top:18px">
+    <a href="index.html" class="btn" data-i18n="back">← بازگشت</a>
+    <div class="card" style="margin-top:12px">
+      <h2 data-i18n="seller_upload">Seller Dashboard — Upload Product</h2>
+      <form id="seller-form">
+        <div class="form-row"><label data-i18n="seller_upload">Product title</label><br>
+        <input type="text" id="p-title" data-i18n-placeholder="seller_upload" placeholder=""></div>
+        <div class="form-row"><label>Price (BRX)</label><br>
+        <input type="number" id="p-price"></div>
+        <div class="form-row"><label>Country</label><br>
+        <select id="p-country"><option value="IR">IR</option><option value="TR">TR</option><option value="AE">AE</option><option value="OM">OM</option><option value="QA">QA</option></select></div>
+        <button type="submit" class="cta" data-i18n="seller_upload">Upload (client-side)</button>
+      </form>
+      <div id="seller-msg" style="margin-top:12px"></div>
+    </div>
+  </div>
+</body>
+</html>

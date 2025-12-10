@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title data-i18n="title">Product — BRIX Marketplace</title>
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts/i18n.js" defer></script>
+<script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <div class="container" style="padding-top:18px">
+    <a href="index.html" class="btn" data-i18n="back">← بازگشت</a>
+    <div class="product-detail card" style="margin-top:12px;display:flex;gap:18px;align-items:flex-start">
+      <img src="assets/placeholder.jpg" alt="product" style="width:320px;height:240px;object-fit:cover;border-radius:10px">
+      <div>
+        <h2 id="prod-title">Sample Product Title</h2>
+        <p class="muted" id="prod-country">From: TR</p>
+        <p style="font-weight:700;margin-top:8px" id="prod-price">Price: 75 BRX</p>
+        <p style="margin-top:12px" id="prod-desc">Sample product short description.</p>
+        <div style="margin-top:18px">
+          <button class="cta" id="buy-now" data-i18n="buy_now">خرید</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
