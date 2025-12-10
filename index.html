@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BRIX Marketplace — Prototype</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="BRIX" class="logo">
+      <div>
+        <h1>BRIX Marketplace</h1>
+        <p class="muted">Global cross-border commerce • Pay with BRICS token</p>
+      </div>
+    </div>
+
+    <nav class="actions">
+      <button id="btn-login" class="btn">ورود / ثبت‌نام</button>
+      <button id="btn-cart" class="btn">سبد خرید (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>BRIX — کارت خرید جهانی</h2>
+      <p>خرید کارت BRIX، شارژ با توکن BRICS و خرید از فروشندگان بین‌المللی ایران، ترکیه، امارات، عمان و قطر.</p>
+      <div class="hero-cta">
+        <button id="create-card" class="cta">تهیه کارت BRIX</button>
+        <a href="#products" class="cta ghost">مشاهده محصولات</a>
+      </div>
+    </section>
+
+    <section id="brix-highlight" class="brix-card">
+      <h3>🌟 Project Brix — زیرمجموعه BRICS</h3>
+      <p>پروژه Brix بازار بین‌المللی مد و محصولات صادراتی را با پرداخت رمزنگاری تسهیل می‌کند.</p>
+      <a class="cta" href="https://brixpay.lovable.app/" target="_blank">مشاهده Brix</a>
+    </section>
+
+    <section id="products" class="card-list">
+      <h3>محصولات</h3>
+      <div class="products-grid" id="products-grid">
+        <!-- products injected by JS -->
+      </div>
+    </section>
+
+    <section id="checkout-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Checkout — BRIX Card</h3>
+        <div id="checkout-body"></div>
+        <div class="modal-actions">
+          <button id="confirm-pay" class="cta">پرداخت با BRICS</button>
+          <button id="close-modal" class="btn ghost">بستن</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>BRIX Marketplace © 2025</div>
+    <div class="socials">
+      <a href="#">Telegram</a> · <a href="#">Instagram</a> · <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
